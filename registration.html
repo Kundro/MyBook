@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up for MyBook</title>
+
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1><img id="imgMenu" src="menu.png" alt="menu"> MyBook</h1>
+   <div id=title>Create a new account</div>
+        <div class=logpass>
+          <p><input id="logdata1" autocomplete="off" placeholder="First name"><input id="logdata2" autocomplete="off" placeholder="Last name"></p>
+          <p id=p1><input id="logmail" autocomplete="off" placeholder="Email or mobile number"></p>
+          <p id=p2><input id="passwordreg" type="password" autocomplete="off" placeholder="New password"></p>
+          <p class="text" id="birthday">Birthday <img style="cursor:pointer;" title="Providing your birthday helps make sure you get the right MyBook experience for your age. If you want to change who sees this, go to the About section of your profile.
+            " id="question" src="question.png" alt="?"></p>
+              <span id="span"><select title="Month" class="text" name="month" id="month"></select>
+              <select title="Day" class="text" name="day" id="day"></select>
+              <select title="Year" class="text" name="year" id="year"></select></span>
+              <br><br>
+          <button class="send" ng-click="send()">Sign up</button>
+        </div>
+        <div id="signup">
+          <a href="http://localhost:3000/" id="signupin">Already have an account?</a>
+        </div>
+
+        <div id="time"></div>
+
+        <script src="js/client.js"></script>
+        <script>
+          function updateTime(){
+            document.getElementById("time").innerHTML = new Date().toTimeString();
+          }
+          setInterval(updateTime, 1000);
+        </script>
+</body>
+</html>

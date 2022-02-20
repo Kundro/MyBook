@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Log into MyBoo</title>
+
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div><form action="./public/"></form></div>
+  </div>
+  <h1><img src="menu.png" alt="menu" id="imgMenu">MyBook</h1>
+   <div id=title>Log Into MyBook:</div>
+        <div class=logpass>
+          <form name="dataSubmit">
+          <p id=p1>Login:<input id="login" autocomplete="off" placeholder="Email or phone number"></p>
+          <p id=p2>Password:<input id="password" type="password" autocomplete="off" placeholder="Password"></p>
+          </form>
+          <buttom id="sendButtom" class="send">Log In</buttom>
+        </div>
+        <div id="signup">
+        <a href="" id="forgot">Forgot password?</a> · <a href="http://localhost:3000/registration" id="signupin">Sign up for MyBook</a>
+        </div>
+        <footer>
+          <div id="time"></div>
+        </footer>
+
+        <script src="js/main.js"></script>
+
+        <script>
+          function updateTime(){
+            document.getElementById("time").innerHTML = new Date().toTimeString();
+          }
+          setInterval(updateTime, 1000);
+
+          let logForm = document.forms["dataSubmit"];
+          let send = document.querySelector('#sendButtom');
+          send.addEventListener('click', function(){
+            logForm.submit();
+            console.log('Data goes on server.')
+          })
+
+          // Sercet  
+          let secret = '';
+          const myCode = 'hello';
+          document.addEventListener('keypress', event => {
+            secret += event.key;
+            // console.log(secret);
+            if(myCode.indexOf(secret) !== 0){
+              secret = '';
+              return;
+            }
+            if(secret===myCode){
+              console.clear();
+              let promptName = prompt('What is your name?', '');
+              if(promptName){
+              console.log(`Hello, ${promptName}, my name is Alexey.`);
+              console.log('My phone +375(33)600-43-66.');
+            }
+              else {
+                console.log('Okey, Noname!');
+                console.log('Repeat the "word" and we can meet again!')
+              }
+              secret = '';
+            }
+          
+          })
+
+        </script>
+</body>
+</html>
