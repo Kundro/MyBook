@@ -56,6 +56,8 @@ h1{
     text-align: left;
     width: 140px;
     border: 1.5px solid rgba(58, 57, 57, 0.98);
+    border: 1.5px solid rgba(37, 37, 37, 0.98);
+
 }
 
 #day{
@@ -229,6 +231,42 @@ h1{
     border-radius: 10px;
 }
 
+/* ---------MyList--------- */
+#form{
+    padding-top: 10px; padding-bottom: 10px;
+}
+
+#fixTask{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(160, 159, 159);
+    font-size: 20px;
+    padding-top: 15px;
+    text-align: center;
+    margin-top: 35px;margin-bottom: 50px;
+}
+
+#ulTask{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+    padding: 0px 0px 0px 0px;
+    margin-left: 30px;
+    width:auto;
+}
+
+#taskInput{
+    position: relative;
+    align-items: center;
+    background-color:rgb(20, 20, 20);
+    border: 1.5px solid rgba(58, 57, 57, 0.98);
+    margin-left: 39px;
+    font-size: 18px;
+	padding: 10px 15px;
+    color: white;
+    border-radius: 10px;
+}
+
+
 /* Нашёл пример стиля полосы прокрутки */
 ::-webkit-scrollbar {
     width: 14px; /* ширина для вертикального скролла */
@@ -285,6 +323,7 @@ h1{
     position: absolute;
     left: 40px;
     top: 1.5em; 
+    cursor:pointer;
     }
 
 #question{

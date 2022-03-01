@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Log into MyBoo</title>
+    <title>My To-do List</title>
 
     <link rel="icon" href="icon.ico" type="image/x-icon">
     <link type="text/css" rel="stylesheet" href="css/styles.css">
@@ -13,36 +13,28 @@
 <body>
   <div><form action="./public/"></form></div>
   </div>
-  <h1><a href="http://localhost:3000/mylist"><img src="menu.png" alt="menu" id="imgMenu"></a>MyBook</h1>
-   <div id=title>Log Into MyBook:</div>
-        <div class=logpass>
-          <form name="dataSubmit">
-          <p id=p1>Login:<input id="login" autocomplete="off" placeholder="Email or phone number"></p>
-          <p id=p2>Password:<input id="password" type="password" autocomplete="off" placeholder="Password"></p>
-          </form>
-          <button id="sendButtom" class="send">Log In</button>
+  <h1><a href="http://localhost:3000/"><img src="menu.png" alt="menu" id="imgMenu"></a>MyBook</h1>
+   <div id=title>My To-Do List:</div>
+        <div style="margin-bottom: 10px;" class="logpass">
+          <form id="form" name="dataSubmit">
+          <input type="text" id="taskInput" autocomplete="off" placeholder="Describe the new task..."><button style="cursor: default; width: 70px; position: absolute; margin-top: 2px; margin-left: 10px;" class="send" type="submit" id="submit">Add</button>
+        </form>
         </div>
-        <div id="signup">
-        <a href="" id="forgot">Forgot password?</a> · <a href="http://localhost:3000/registration" id="signupin">Sign up for MyBook</a>
+        <div id="placeForFix" style="padding-top: 15px; padding-bottom: 15px; text-align: start;" class="logpass">
+            <div id="fixTask">No tasks</div>
+            <ul type="disk" id="ulTask"></ul>
         </div>
         <footer>
           <div id="time"></div>
         </footer>
 
-        <script src="js/main.js"></script>
+        <script src="js/todo.js"></script>
 
         <script>
           function updateTime(){
             document.getElementById("time").innerHTML = new Date().toTimeString();
           }
           setInterval(updateTime, 1000);
-
-          let logForm = document.forms["dataSubmit"];
-          let send = document.querySelector('#sendButtom');
-          send.addEventListener('click', function(){
-            logForm.submit();
-            console.log('Data goes on server.')
-          })
 
           // Sercet  
           let secret = '';

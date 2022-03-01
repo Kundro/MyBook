@@ -17,6 +17,10 @@ app.get('/registration', function(req, res){
     res.sendFile('F:/Papka/MyBook/registration.html');
 });
 
+app.get('/mylist', function(req, res){
+    res.sendFile('F:/Papka/MyBook/mylist.html');
+})
+
 app.listen(3000, function(){
     console.log('Listening on http://localhost:3000');
 }); 
